@@ -12,7 +12,7 @@ body {
     line-height: 1.5;
 }
 
-/* --- HEADER --- */
+/* --- HEADER & NAVBAR --- */
 .header {
     display: flex;
     justify-content: space-between;
@@ -37,11 +37,11 @@ body {
     color: #f1cf0a;
 }
 
-/* --- HERO SECTION (TITRE BLANC) --- */
+/* --- HERO SECTION & CONTROLS --- */
 .hero-section {
     background-color: #ffffff;
     color: #000000;
-    padding: 80px 10%; /* Augmentation du padding pour plus d'air */
+    padding: 80px 10%;
     text-align: center;
 }
 
@@ -53,15 +53,14 @@ body {
 .page-title p {
     font-size: 1.4rem;
     color: #555;
-    margin-bottom: 80px; /* ESPACE AUGMENTÉ ICI (entre le texte et la recherche) */
+    margin-bottom: 80px;
 }
 
-/* --- CONTROLES (SEARCH & FILTER) --- */
 .controls {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px; /* Espace entre la barre et le "Filter by" */
+    gap: 25px;
 }
 
 .search-box {
@@ -74,11 +73,10 @@ body {
     font-size: 1rem;
     border: 2px solid #000;
     border-radius: 30px;
-    width: 380px; /* Légèrement plus large pour l'équilibre visuel */
+    width: 380px;
     outline: none;
 }
 
-/* Effet sur le bouton Research */
 #searchBtn {
     padding: 15px 35px;
     background-color: #000;
@@ -87,16 +85,64 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s ease; /* Transition fluide */
+    transition: all 0.3s ease;
 }
 
 #searchBtn:hover {
-    background-color: #f1cf0a; /* Devient jaune Efrei */
-    color: #000;              /* Texte devient noir */
-    transform: translateY(-2px); /* Petit saut vers le haut */
+    background-color: #f1cf0a;
+    color: #000;
+    transform: translateY(-2px);
 }
 
-/* --- GRILLE FACULTY (FOND NOIR / CARTES BLANCHES) --- */
+.filter-sort-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cat-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    background: #f1cf0a;
+    color: #000;
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.sort-box select {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 15px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- FACULTY --- */
 .faculty-grid {
     background-color: #000000;
     display: grid;
@@ -107,7 +153,6 @@ body {
     margin: 0 auto;
 }
 
-/* --- EFFET AU SURVOL DES CARTES --- */
 .person-card {
     background-color: #ffffff;
     color: #000000;
@@ -115,34 +160,24 @@ body {
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
-
-    /* Transition fluide pour tous les changements (0.3 secondes) */
     transition: all 0.3s ease-in-out;
-
-    /* Ombre légère par défaut */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     top: 0;
 }
 
 .person-card:hover {
-    /* Soulève légèrement la carte */
     transform: translateY(-10px) scale(1.02);
-
-    /* Accentue l'ombre pour donner un effet de profondeur */
-    box-shadow: 0 15px 30px rgba(241, 207, 10, 0.2); /* Ombre teintée au jaune Efrei */
-
-    /* Optionnel : change très légèrement la couleur du nom au survol */
+    box-shadow: 0 15px 30px rgba(241, 207, 10, 0.2);
 }
 
 .person-card:hover .name {
-    color: #f1cf0a; /* Le nom passe au jaune Efrei au survol */
+    color: #f1cf0a;
     transition: color 0.3s ease;
 }
 
-/* Effet sur la photo au survol */
 .person-card:hover .photo-area {
-    background-color: #d0d0d0; /* La zone grise devient un peu plus foncée */
+    background-color: #d0d0d0;
     transition: background-color 0.3s ease;
 }
 
@@ -163,6 +198,385 @@ body {
 .role {
     font-size: 1.1rem;
     color: #666;
+}
+
+/* --- PUBLICATIONS --- */
+.publications-list {
+    background: #000;
+    padding: 60px 10%;
+}
+
+.pub-card {
+    background: #fff;
+    color: #000;
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 220px;
+}
+
+.pub-image {
+    width: 250px;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.pub-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pub-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.pub-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.pub-desc {
+    color: #444;
+    line-height: 1.4;
+}
+
+.read-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    background: #000;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.read-btn:hover {
+    background: #f1cf0a;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* --- PROGRAMS --- */
+.programs-container {
+    background-color: #000;
+    padding: 60px 10%;
+}
+
+.year-row {
+    margin-bottom: 80px;
+    transition: opacity 0.4s ease;
+}
+
+.year-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-left: 5px solid #f1cf0a;
+    padding-left: 20px;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    perspective: 1000px;
+}
+
+.course-card {
+    min-width: 45%;
+    background: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    top: 0;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(241, 207, 10, 0.4);
+}
+
+.card-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #000;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.course-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* --- PLANNING & GRID --- */
+.planning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #f1cf0a;
+    color: #000;
+}
+
+#weekLabel {
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.day-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.day-header {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 5px;
+}
+
+.day-header.active {
+    color: #f1cf0a;
+}
+
+.event-cell {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.event-bar {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 5px;
+    line-height: 1.2;
+}
+
+.event-bar.empty {
+    background: transparent;
+    border: none;
+}
+
+.calendar-base {
+    display: none;
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.calendar-base.active-week {
+    display: block;
+    animation: fadeIn 0.4s;
+}
+
+.cyan {
+    background: #e0fbff;
+    border-left: 4px solid #00d1ff;
+    color: #007086;
+}
+
+.yellow {
+    background: #fff9e0;
+    border-left: 4px solid #f1cf0a;
+    color: #856d00;
+}
+
+/* --- MODALS (FACULTY & PUBS) --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.modal-photo {
+    width: 180px;
+    height: 180px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.modal-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.modal-info p {
+    font-size: 1.3rem;
+    color: #f1cf0a;
+    font-weight: bold;
+}
+
+.modal-body h3 {
+    margin: 20px 0 10px 0;
+    border-bottom: 2px solid #f1cf0a;
+    display: inline-block;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.pub-modal-size {
+    width: 80%;
+    max-width: 900px;
+    padding: 50px;
+}
+
+.pub-modal-header-split {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.modal-section-left, .modal-section-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-section-left {
+    border-right: 1px solid #eee;
+}
+
+.modal-image-placeholder, .author-photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-meta-text, .modal-author-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.pub-modal-body h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.modal-text-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.modal-divider {
+    border: 0;
+    height: 4px;
+    background: #f1cf0a;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- FOOTER --- */
@@ -221,7 +635,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* COPYRIGHT BAS UNE SEULE LIGNE */
 .footer-bottom {
     border-top: 1px solid #333;
     padding-top: 20px;
@@ -241,9 +654,10 @@ body {
     text-decoration: none;
 }
 
-/* RESPONSIVITÉ */
+/* --- RESPONSIVITÉ --- */
 @media (max-width: 1100px) {
     .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+    .modal-content { width: 85%; }
 }
 
 @media (max-width: 768px) {
@@ -253,249 +667,8 @@ body {
     .footer-main { flex-direction: column; gap: 40px; }
     .footer-contact { align-items: center; }
     .logo-efrei-footer { width: 200px; }
-}
-
-
-/* --- MODALE --- */
-.modal {
-    display: none; /* Caché par défaut */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre transparent */
-    backdrop-filter: blur(8px); /* L'EFFET DE FLOU DERRIÈRE */
-}
-
-.modal-content {
-    background-color: #fff;
-    color: #000;
-    margin: 5% auto;
-    padding: 40px;
-    border-radius: 20px;
-    width: 60%; /* Ne prend pas toute la page */
-    max-width: 800px;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.close-modal {
-    position: absolute;
-    right: 25px;
-    top: 15px;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* --- STRUCTURE INTERNE MODALE --- */
-.modal-header {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-    align-items: center;
-}
-
-.modal-photo {
-    width: 180px;
-    height: 180px;
-    background-color: #e0e0e0;
-    border-radius: 15px;
-    flex-shrink: 0;
-}
-
-.modal-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-
-.modal-info p {
-    font-size: 1.3rem;
-    color: #f1cf0a; /* Rappel couleur Efrei */
-    font-weight: bold;
-}
-
-.modal-body h3 {
-    margin: 20px 0 10px 0;
-    border-bottom: 2px solid #f1cf0a;
-    display: inline-block;
-}
-
-.modal-body p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-
-/* --- PUBLICATIONS SPECIFIC --- */
-.filter-sort-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px;
-}
-
-.category-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.cat-btn {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px; /* BIEN ARRONDI */
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.cat-btn.active, .cat-btn:hover {
-    background: #f1cf0a;
-    color: #000;
-}
-
-/* SORT BY ÉPURÉ (Écriture noire, pas de fond) */
-.sort-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #000;
-    font-weight: bold;
-}
-
-.sort-box select {
-    background: #fff;
-    color: #000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 15px;
-    outline: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* --- PUBLICATION CARDS (LIST) --- */
-.publications-list {
-    background: #000;
-    padding: 60px 10%;
-}
-
-.pub-card {
-    background: #fff;
-    color: #000;
-    display: flex;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 220px;
-}
-
-.pub-image {
-    width: 250px;
-    background: #e0e0e0;
-    flex-shrink: 0;
-}
-
-.pub-content {
-    padding: 25px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.pub-meta { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
-.pub-title { font-size: 1.5rem; margin-bottom: 15px; }
-.pub-desc { color: #444; line-height: 1.4; }
-
-.read-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 25px;
-    background: #000;
-    color: #fff;
-    padding: 8px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.read-btn:hover {
-    background: #f1cf0a;
-    color: #000;
-    transform: scale(1.1);
-}
-
-/* --- PUB MODAL STYLES --- */
-.pub-modal-size {
-    width: 80%;
-    max-width: 900px;
-    padding: 50px;
-}
-
-/* Header divisé en deux */
-.pub-modal-header-split {
-    display: flex;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-
-.modal-section-left, .modal-section-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
-    justify-content: center;
-}
-
-.modal-section-left {
-    border-right: 1px solid #eee; /* Séparation visuelle */
-}
-
-/* Images de même taille */
-.modal-image-placeholder, .author-photo-placeholder {
-    width: 200px;
-    height: 200px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.modal-meta-text, .modal-author-name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.pub-modal-body h2 {
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-}
-
-.modal-text-content {
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-/* Petit divider jaune sous le titre dans la modale */
-.modal-divider {
-    border: 0;
-    height: 4px;
-    background: #f1cf0a;
-    width: 60px;
-    margin-bottom: 20px;
+    .pub-card { flex-direction: column; height: auto; }
+    .pub-image { width: 100%; height: 200px; }
+    .calendar-grid { grid-template-columns: 1fr; }
+    .modal-header { flex-direction: column; text-align: center; }
 }

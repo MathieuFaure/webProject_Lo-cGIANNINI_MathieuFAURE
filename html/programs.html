@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programs - Efrei CS Department</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <img class="logo-efrei" src="../img/logoEfrei.png" alt="Efrei Logo" />
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="publications.html">Publications</a>
+        <a href="programs.html" class="active">Programs</a>
+    </nav>
+</header>
+
+<section class="hero-section">
+    <div class="page-title">
+        <h1>Courses and training Program</h1>
+        <p>Computer Science Curriculum</p>
+    </div>
+    <div class="category-buttons">
+        <button class="cat-btn active" data-year="all">All</button>
+        <button class="cat-btn" data-year="1">Year 1</button>
+        <button class="cat-btn" data-year="2">Year 2</button>
+        <button class="cat-btn" data-year="3">Year 3</button>
+        <button class="cat-btn" data-year="4">Year 4</button>
+        <button class="cat-btn" data-year="5">Year 5</button>
+    </div>
+</section>
+
+<main class="programs-container">
+
+    <!-- YEAR 1 -->
+    <div class="year-row" data-year="1">
+        <h2 class="year-title">Year 1</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Cours 1 -->
+                <div class="course-card" onclick="openCourseModal('Algorithms & Logic', 'Sem 1', 'Year 1', 'Foundations of computational thinking, flowcharts, and procedural programming using Python.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 1</span></div>
+                    <h3>Algorithms & Logic</h3>
+                    <p>Foundations of computational thinking and procedural programming.</p>
+                </div>
+                <!-- Cours 2 -->
+                <div class="course-card" onclick="openCourseModal('Computer Architecture', 'Sem 1', 'Year 1', 'Internal structure of computers: CPUs, memory management, and binary logic gates.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 1</span></div>
+                    <h3>Computer Architecture</h3>
+                    <p>Internal structure of computers: CPUs, memory, and binary logic.</p>
+                </div>
+                <!-- Cours 3 -->
+                <div class="course-card" onclick="openCourseModal('Discrete Mathematics', 'Sem 1', 'Year 1', 'Set theory, boolean algebra, and graph theory applied to computer science.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 1</span></div>
+                    <h3>Discrete Mathematics</h3>
+                    <p>Set theory, boolean algebra, and graph theory for CS.</p>
+                </div>
+                <!-- Cours 4 -->
+                <div class="course-card" onclick="openCourseModal('C Programming', 'Sem 2', 'Year 1', 'Low-level programming, manual memory management, and pointers mastery.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 2</span></div>
+                    <h3>C Programming</h3>
+                    <p>Low-level programming, manual memory management, and pointers.</p>
+                </div>
+                <!-- Cours 5 -->
+                <div class="course-card" onclick="openCourseModal('Web Technologies', 'Sem 2', 'Year 1', 'Building the modern web using HTML5, CSS3, and core JavaScript principles.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 2</span></div>
+                    <h3>Web Technologies</h3>
+                    <p>Building the modern web using HTML5, CSS3, and JavaScript.</p>
+                </div>
+                <!-- Cours 6 -->
+                <div class="course-card" onclick="openCourseModal('Operating Systems I', 'Sem 2', 'Year 1', 'Introduction to Unix-like systems, shell scripting, and file system architecture.')">
+                    <div class="card-header"><span class="badge">Year 1</span><span class="badge">Sem 2</span></div>
+                    <h3>Operating Systems I</h3>
+                    <p>Unix systems, shell scripting, and file system architecture.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 2 -->
+    <div class="year-row" data-year="2">
+        <h2 class="year-title">Year 2</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="course-card" onclick="openCourseModal('Object-Oriented Programming', 'Sem 3', 'Year 2', 'Advanced Java development focusing on inheritance, polymorphism, and design patterns.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 3</span></div>
+                    <h3>OOP (Java)</h3>
+                    <p>Advanced Java development focusing on inheritance and design patterns.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Data Structures', 'Sem 3', 'Year 2', 'Implementation of linked lists, trees, stacks, and queues for efficient data handling.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 3</span></div>
+                    <h3>Data Structures</h3>
+                    <p>Implementation of trees, stacks, and queues for efficient data handling.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Database Systems', 'Sem 3', 'Year 2', 'Relational database design, normalization, and complex SQL querying.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 3</span></div>
+                    <h3>Database Systems</h3>
+                    <p>Relational database design and complex SQL querying.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Network Fundamentals', 'Sem 4', 'Year 2', 'Understanding the OSI model, TCP/IP protocols, and network routing.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 4</span></div>
+                    <h3>Network Fundamentals</h3>
+                    <p>Understanding the OSI model, TCP/IP protocols, and routing.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Software Engineering', 'Sem 4', 'Year 2', 'Agile methodologies, Git version control, and professional software lifecycle.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 4</span></div>
+                    <h3>Software Engineering</h3>
+                    <p>Agile methodologies, Git, and software lifecycle.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('UI/UX Design', 'Sem 4', 'Year 2', 'Principles of user interface design, ergonomics, and rapid prototyping.')">
+                    <div class="card-header"><span class="badge">Year 2</span><span class="badge">Sem 4</span></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Principles of user interface design and rapid prototyping.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 3 -->
+    <div class="year-row" data-year="3">
+        <h2 class="year-title">Year 3</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="course-card" onclick="openCourseModal('Artificial Intelligence', 'Sem 5', 'Year 3', 'Search algorithms, expert systems, and heuristic problem solving.')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 5</span></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Search algorithms and heuristic problem solving.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Cybersecurity', 'Sem 5', 'Year 3', 'Core cryptography, network security, and penetration testing basics.')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 5</span></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Core cryptography, network security, and pentesting.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Mobile Development', 'Sem 5', 'Year 3', 'Native app development for iOS (Swift) and Android (Kotlin).')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 5</span></div>
+                    <h3>Mobile Development</h3>
+                    <p>Native app development for iOS and Android.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Cloud Computing', 'Sem 6', 'Year 3', 'Microservices architecture, AWS/Azure, and containerization.')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 6</span></div>
+                    <h3>Cloud Computing</h3>
+                    <p>Microservices architecture and containerization.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Parallel Programming', 'Sem 6', 'Year 3', 'Multi-threading, concurrency, and high-performance computing (HPC).')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 6</span></div>
+                    <h3>Parallel Programming</h3>
+                    <p>Multi-threading and high-performance computing.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Compilers', 'Sem 6', 'Year 3', 'Lexical analysis, parsing, and the creation of custom languages.')">
+                    <div class="card-header"><span class="badge">Year 3</span><span class="badge">Sem 6</span></div>
+                    <h3>Compilers</h3>
+                    <p>Lexical analysis and the creation of custom languages.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 4 -->
+    <div class="year-row" data-year="4">
+        <h2 class="year-title">Year 4</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="course-card" onclick="openCourseModal('Machine Learning', 'Sem 7', 'Year 4', 'Deep dive into regression, classification, and neural networks using Scikit-Learn and TensorFlow.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 7</span></div>
+                    <h3>Machine Learning</h3>
+                    <p>Regression, classification, and neural networks with Scikit-Learn.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('DevOps & CI/CD', 'Sem 7', 'Year 4', 'Automation of software deployment using Docker, Kubernetes, and Jenkins pipelines.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 7</span></div>
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Automation, Docker, Kubernetes, and CI/CD pipelines.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Blockchain Technology', 'Sem 7', 'Year 4', 'Principles of decentralization, smart contracts (Solidity), and crypto-economics.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 7</span></div>
+                    <h3>Blockchain Tech</h3>
+                    <p>Smart contracts, decentralization, and crypto-economics.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Big Data Analytics', 'Sem 8', 'Year 4', 'Processing massive datasets using Hadoop ecosystem, Spark, and NoSQL databases.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 8</span></div>
+                    <h3>Big Data Analytics</h3>
+                    <p>Massive data processing with Hadoop and Spark.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Embedded Systems', 'Sem 8', 'Year 4', 'Programming microcontrollers and real-time operating systems (RTOS) for IoT.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 8</span></div>
+                    <h3>Embedded Systems</h3>
+                    <p>Microcontrollers and real-time systems programming.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Computer Graphics', 'Sem 8', 'Year 4', 'Mathematical foundations of 3D rendering and GPU programming with OpenGL/Vulkan.')">
+                    <div class="card-header"><span class="badge">Year 4</span><span class="badge">Sem 8</span></div>
+                    <h3>Computer Graphics</h3>
+                    <p>3D rendering and GPU programming with OpenGL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YEAR 5 -->
+    <div class="year-row" data-year="5">
+        <h2 class="year-title">Year 5</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="course-card" onclick="openCourseModal('Deep Learning', 'Sem 9', 'Year 5', 'Advanced neural architectures: CNNs for vision and RNNs/Transformers for NLP using PyTorch.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 9</span></div>
+                    <h3>Deep Learning</h3>
+                    <p>Advanced CNNs and RNNs using PyTorch.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Quantum Computing', 'Sem 9', 'Year 5', 'Quantum logic gates, qubits, and algorithms (Shor/Grover) on IBM Q platforms.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 9</span></div>
+                    <h3>Quantum Computing</h3>
+                    <p>Introduction to qubits, gates, and quantum algorithms.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Advanced Cryptography', 'Sem 9', 'Year 5', 'Exploring post-quantum security, Zero-Knowledge proofs, and homomorphic encryption.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 9</span></div>
+                    <h3>Advanced Crypto</h3>
+                    <p>Post-quantum cryptography and Zero-Knowledge protocols.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('IT Strategy & Governance', 'Sem 10', 'Year 5', 'Management of IT projects, ITIL standards, audit, and GDPR compliance.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 10</span></div>
+                    <h3>IT Strategy</h3>
+                    <p>IT project management, audit, and GDPR compliance.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Virtual & Augmented Reality', 'Sem 10', 'Year 5', 'Creating immersive 3D environments and interactions using Unity 3D or Unreal Engine.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 10</span></div>
+                    <h3>Virtual Reality</h3>
+                    <p>Developing immersive environments in Unity/Unreal.</p>
+                </div>
+                <div class="course-card" onclick="openCourseModal('Master Thesis', 'Sem 10', 'Year 5', 'Final research or industrial project focusing on an innovative computer science solution.')">
+                    <div class="card-header"><span class="badge">Year 5</span><span class="badge">Sem 10</span></div>
+                    <h3>Master Thesis</h3>
+                    <p>Final research project on an innovative CS topic.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Modale Syllabus & Planning -->
+<div id="courseModal" class="modal">
+    <div class="modal-content programs-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <section class="syllabus-section">
+                <h2>Syllabus: <span id="modalCourseTitle"></span></h2>
+                <p id="modalCourseDesc"></p>
+            </section>
+
+            <hr class="modal-divider">
+
+            <section class="planning-section">
+                <div class="planning-header">
+                    <h2>Planning</h2>
+                    <div class="week-nav">
+                        <button id="prevWeek" class="nav-btn">← Previous Week</button>
+                        <span id="weekLabel">Week 1 (Oct 20 - 24)</span>
+                        <button id="nextWeek" class="nav-btn">Next Week →</button>
+                    </div>
+                </div>
+
+                <!-- Wrapper qui contient les deux semaines -->
+                <div class="calendar-wrapper">
+
+                    <!-- SEMAINE 1 -->
+                    <div id="week1" class="calendar-base active-week">
+                        <div class="calendar-grid">
+                            <div class="day-column">
+                                <div class="day-header">MON 20</div>
+                                <div class="event-cell"><div class="event-bar cyan">08h: Algorithms</div></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"><div class="event-bar yellow">14h: Lab Python</div></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">TUE 21</div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"><div class="event-bar cyan">10h: Architecture</div></div>
+                                <div class="event-cell"><div class="event-bar cyan">15h: Math</div></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">WED 22</div>
+                                <div class="event-cell"><div class="event-bar yellow">09h: Workshop</div></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">THU 23</div>
+                                <div class="event-cell"><div class="event-bar cyan">08h: Logic</div></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">FRI 24</div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"><div class="event-bar cyan">14h: Review</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEMAINE 2 -->
+                    <div id="week2" class="calendar-base">
+                        <div class="calendar-grid">
+                            <div class="day-column">
+                                <div class="day-header">MON 27</div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"><div class="event-bar yellow">10h: Project Demo</div></div>
+                                <div class="event-cell"><div class="event-bar cyan">14h: Advanced Theory</div></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">TUE 28</div>
+                                <div class="event-cell"><div class="event-bar cyan">08h: Networking</div></div>
+                                <div class="event-cell"><div class="event-bar cyan">11h: System Admin</div></div>
+                                <div class="event-cell"></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">WED 29</div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"><div class="event-bar yellow">13h: Coding Sprint</div></div>
+                                <div class="event-cell"></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">THU 30</div>
+                                <div class="event-cell"><div class="event-bar cyan">09h: Guest Lecture</div></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"></div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">FRI 31</div>
+                                <div class="event-cell"><div class="event-bar yellow">08h: Final Quiz</div></div>
+                                <div class="event-cell"></div>
+                                <div class="event-cell"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-main">
+        <div class="footer-logo">
+            <img class="logo-efrei-footer" src="../img/logoEfrei.png" alt="Efrei Logo" />
+        </div>
+
+        <div class="footer-nav">
+            <h3>NAVIGATION</h3>
+            <a href="index.html">Home</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="publications.html">Publications</a>
+            <a href="content.html">Content</a>
+        </div>
+
+        <div class="footer-contact">
+            <div class="contact-info">
+                <h3>CONTACT</h3>
+                <p>30-32 av. de la République</p>
+                <p>94800 Villejuif, France</p>
+                <p>cs.department@efrei.fr</p>
+                <p>+33 1 01 02 03 04</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>©2026 Efrei | <a href="#">Personal Data</a> | <a href="https://efrei.fr">Efrei.fr</a> | <a href="#">About Us</a></p>
+    </div>
+</footer>
+
+<script src="../js/scriptPrograms.js"></script>
+</body>
+</html>
