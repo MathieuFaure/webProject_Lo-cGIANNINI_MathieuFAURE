@@ -33,11 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const role = card.querySelector('.role').textContent;
             const bio = card.getAttribute('data-bio') || "No biography available.";
             const edu = card.getAttribute('data-edu') || "Education details coming soon.";
+            const imageSrc = card.querySelector('.photo-area').src;
+            const modalPhoto = document.getElementById('modalPhoto');
 
             document.getElementById('modalName').textContent = name;
             document.getElementById('modalRole').textContent = role;
             document.getElementById('modalBio').textContent = bio;
             document.getElementById('modalEdu').textContent = edu;
+
+            modalPhoto.src = imageSrc;
 
             modal.style.display = "block";
             document.body.style.overflow = "hidden";

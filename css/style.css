@@ -183,10 +183,21 @@ body {
 
 .photo-area {
     width: 100%;
-    height: 250px;
-    background-color: #e0e0e0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.modal-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    background-color: #e0e0e0;
 }
 
 .name {
@@ -220,6 +231,9 @@ body {
     width: 250px;
     background: #e0e0e0;
     flex-shrink: 0;
+
+    object-fit: cover;
+    object-position: center;
 }
 
 .pub-content {

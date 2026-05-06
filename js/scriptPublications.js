@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('modalPubMeta').textContent = card.querySelector('.pub-meta').textContent;
                 document.getElementById('modalAuthorName').textContent = card.dataset.author;
                 document.getElementById('modalFullText').textContent = card.dataset.fulltext;
+                document.getElementById('modalImage').src = card.querySelector('.pub-image').src;
+                document.getElementById('modalPhoto').src = card.dataset.photo;
 
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
