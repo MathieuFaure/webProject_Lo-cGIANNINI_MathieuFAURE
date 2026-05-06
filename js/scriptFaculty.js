@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const roleFilter = document.getElementById('roleFilter');
     const cards = document.querySelectorAll('.person-card');
 
-    // Eléments de la modale
     const modal = document.getElementById('memberModal');
     const closeModal = document.querySelector('.close-modal');
 
-    // 1. FILTRAGE (Gardé de l'étape précédente)
+    // FILTER AND RESEARCH
     function performFiltering() {
         const query = searchInput.value.toLowerCase().trim();
         const selectedRole = roleFilter.value;
@@ -26,34 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', performFiltering);
     roleFilter.addEventListener('change', performFiltering);
 
-    // 2. GESTION DE LA MODALE
+    // MODALE
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            // Récupérer les données de la carte cliquée
+
             const name = card.querySelector('.name').textContent;
             const role = card.querySelector('.role').textContent;
             const bio = card.getAttribute('data-bio') || "No biography available.";
             const edu = card.getAttribute('data-edu') || "Education details coming soon.";
 
-            // Remplir la modale
             document.getElementById('modalName').textContent = name;
             document.getElementById('modalRole').textContent = role;
             document.getElementById('modalBio').textContent = bio;
             document.getElementById('modalEdu').textContent = edu;
 
-            // Afficher la modale
             modal.style.display = "block";
-            document.body.style.overflow = "hidden"; // Empêche de scroller derrière
+            document.body.style.overflow = "hidden";
         });
     });
 
-    // Fermer la modale
     closeModal.addEventListener('click', () => {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     });
 
-    // Fermer si on clique en dehors du bloc blanc
     window.addEventListener('click', (event) => {
         if (event.target == modal) {
             modal.style.display = "none";
