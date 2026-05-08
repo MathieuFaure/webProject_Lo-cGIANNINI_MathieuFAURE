@@ -15,40 +15,149 @@
         <a href="html/faculty.html">Faculty</a>
         <a href="html/publications.html">Publications</a>
         <a href="html/programs.html">Programs</a>
+        <a href="html/about.html">About</a>
     </nav>
 </header>
 
 
 <main class="home-page">
 
-    <h1 class="home-hero-title">EFREI's&nbsp;&nbsp;Computer Science Department</h1>
-    <div class="home-hero-divider"></div>
-
-    <div class="campus-block">
-        <img class="image-campus-efrei" src="img/image-campus-efrei.png" alt="Republic Campus" />
-        <p class="campus-caption">Republic Campus</p>
-    </div>
-
-    <h2 class="missions-title">Our Missions</h2>
-    <div class="missions-divider"></div>
-    <p class="missions-text">
-        We bridge the gap between abstract computation and real-world application. Our curriculum is designed
-        to evolve alongside the industry, ensuring our graduates are not just developers, but architects of
-        the next technological era.
-    </p>
-
-    <div class="news-section">
-        <img class="news-image" src="img/news-image.png" alt="News illustration" />
-        <div class="news-content">
-            <p class="news-title">News</p>
-            <div class="news-divider"></div>
-            <ul class="news-list">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
+    <!-- Hero -->
+    <div class="home-hero">
+        <div class="home-hero-left">
+            <span class="home-hero-eyebrow">Efrei Paris — Villejuif</span>
+            <h1 class="home-hero-title">
+                Computer
+                <span>Science</span>
+                Department
+            </h1>
+            <p class="home-hero-desc">
+                We bridge the gap between abstract computation and real-world impact.
+                Shaping the architects of the next technological era.
+            </p>
+            <div class="home-hero-cta">
+                <a href="html/programs.html" class="btn-primary">Explore Programs</a>
+                <a href="html/faculty.html" class="btn-ghost">Meet the Team</a>
+            </div>
+            <div class="home-hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Faculty Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Research Labs</div>
+                </div>
+            </div>
+        </div>
+        <div class="home-hero-right">
+            <img src="img/image-campus-efrei.png" alt="Republic Campus" />
+            <div class="home-hero-right-overlay"></div>
+            <span class="home-hero-right-label">Republic Campus</span>
         </div>
     </div>
+
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span class="ticker-item">Artificial Intelligence</span>
+            <span class="ticker-item">Cybersecurity</span>
+            <span class="ticker-item">Computer Vision</span>
+            <span class="ticker-item">NLP &amp; Language Models</span>
+            <span class="ticker-item">Quantum Computing</span>
+            <span class="ticker-item">Embedded Systems</span>
+            <span class="ticker-item">Big Data</span>
+            <span class="ticker-item">Augmented Reality</span>
+            <!-- duplicate for seamless loop -->
+            <span class="ticker-item">Artificial Intelligence</span>
+            <span class="ticker-item">Cybersecurity</span>
+            <span class="ticker-item">Computer Vision</span>
+            <span class="ticker-item">NLP &amp; Language Models</span>
+            <span class="ticker-item">Quantum Computing</span>
+            <span class="ticker-item">Embedded Systems</span>
+            <span class="ticker-item">Big Data</span>
+            <span class="ticker-item">Augmented Reality</span>
+        </div>
+    </div>
+
+    <!-- Missions -->
+    <section class="missions-section">
+        <div>
+            <span class="section-tag">Our Missions</span>
+            <h2 class="missions-heading">What drives us</h2>
+            <div class="missions-accent-line"></div>
+        </div>
+        <div>
+            <p class="missions-body">
+                Our curriculum evolves alongside the industry, ensuring our graduates are not just developers,
+                but architects of the next technological era. We cultivate rigorous thinkers, ethical builders,
+                and bold innovators who shape the world through code.
+            </p>
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🔬</div>
+                    <div class="pillar-title">Research-led Teaching</div>
+                    <div class="pillar-desc">Courses informed by cutting-edge research from our own labs.</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🌍</div>
+                    <div class="pillar-title">International Collaboration</div>
+                    <div class="pillar-desc">Partnerships with global universities and industry leaders.</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⚖️</div>
+                    <div class="pillar-title">Technological Ethics</div>
+                    <div class="pillar-desc">Responsible AI and digital governance embedded in every program.</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🚀</div>
+                    <div class="pillar-title">Industry-ready Skills</div>
+                    <div class="pillar-desc">Hands-on projects and internships with leading tech companies.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news-section">
+        <div class="section-header">
+            <div>
+                <span class="section-tag" style="background:#1a1a1a;">Latest</span>
+                <h2 class="news-heading">Department <span>News</span></h2>
+            </div>
+            <a href="#" class="view-all-link">View all →</a>
+        </div>
+        <div class="news-grid">
+            <div class="news-card featured">
+                <div class="news-card-img-placeholder" style="aspect-ratio:4/3;">📰</div>
+                <div class="news-card-body">
+                    <span class="news-card-tag">Featured · Research</span>
+                    <p class="news-card-title">New AI Lab Opens at Efrei — Focusing on Responsible Machine Learning for Healthcare Applications</p>
+                    <span class="news-card-date">May 2026</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-img-placeholder">🏆</div>
+                <div class="news-card-body">
+                    <span class="news-card-tag">Award</span>
+                    <p class="news-card-title">Sriya Iyer wins Best Paper at IEEE Quantum Cryptography Summit</p>
+                    <span class="news-card-date">April 2026</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-img-placeholder">📅</div>
+                <div class="news-card-body">
+                    <span class="news-card-tag">Event</span>
+                    <p class="news-card-title">Open Day — Discover CS Programs and meet the Faculty Team</p>
+                    <span class="news-card-date">June 12, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 
