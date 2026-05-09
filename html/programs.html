@@ -6,14 +6,20 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
 <header class="header">
     <img class="logo-efrei" src="../img/logoEfrei.png" alt="Efrei Logo" />
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="faculty.html">Faculty</a>
-        <a href="publications.html">Publications</a>
-        <a href="programs.html" class="active">Programs</a>
-        <a href="about.html">About Us</a>
+    <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="navbar" id="mobile-nav">
+        <a href="index.html"><i class="ti ti-home"></i> Home</a>
+        <a href="faculty.html"><i class="ti ti-users"></i> Faculty</a>
+        <a href="publications.html"><i class="ti ti-file-text"></i> Publications</a>
+        <a href="programs.html" class="active"><i class="ti ti-book"></i> Programs</a>
+        <a href="about.html"><i class="ti ti-info-circle"></i> About Us</a>
     </nav>
 </header>
 
@@ -367,5 +373,7 @@
 </footer>
 
 <script src="../js/scriptPrograms.js"></script>
+<script src="../js/scriptHeader.js"></script>
+
 </body>
 </html>

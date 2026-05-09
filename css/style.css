@@ -1671,6 +1671,10 @@ table.syllabus-table td.syll-cat {
 }
 
 @media (max-width: 768px) {
+    .logo-efrei {
+        height: clamp(24px, 4vw, 48px);
+        width: auto;
+    }
     .home-hero { grid-template-columns: 1fr; }
     .home-hero-right { height: 50vw; }
     .missions-section { grid-template-columns: 1fr; gap: 40px; }
@@ -1699,4 +1703,69 @@ table.syllabus-table td.syll-cat {
     .form-group.full { grid-column: span 1; }
     .team-grid { grid-template-columns: 1fr; }
     .contact-form { padding: 32px 24px; }
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        height: 56px;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+    .hamburger-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff; /* adjust to your header text color */
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+    .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: inherit; /* matches your header color */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .navbar.open {
+        max-height: 400px;
+    }
+    .navbar a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 20px;
+        font-size: 15px;
+        border-left: 2px solid transparent;
+    }
+    .navbar a.active {
+        border-left-color: #7a9ff5; /* accent color */
+        color: #7a9ff5;
+    }
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 769px) {
+    .hamburger-btn { display: none; }
 }
