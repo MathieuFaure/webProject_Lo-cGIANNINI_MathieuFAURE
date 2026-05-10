@@ -1727,7 +1727,7 @@ table.syllabus-table td.syll-cat {
         display: block;
         width: 22px;
         height: 2px;
-        background: #fff; /* adjust to your header text color */
+        background: #fff;
         border-radius: 2px;
         transition: transform 0.25s ease, opacity 0.2s ease;
     }
@@ -1742,7 +1742,7 @@ table.syllabus-table td.syll-cat {
         top: 56px;
         left: 0;
         right: 0;
-        background: inherit; /* matches your header color */
+        background: inherit;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1760,12 +1760,108 @@ table.syllabus-table td.syll-cat {
         border-left: 2px solid transparent;
     }
     .navbar a.active {
-        border-left-color: #7a9ff5; /* accent color */
+        border-left-color: #7a9ff5;
         color: #7a9ff5;
     }
 }
 
-/* Hide hamburger on desktop */
 @media (min-width: 769px) {
     .hamburger-btn { display: none; }
+}
+
+
+@media (max-width: 1100px) {
+    .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .modal-content {
+        width: 90%;
+        margin: 20px auto;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .page-title h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cat-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        flex: 1 1 40%;
+        max-width: 150px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10px auto;
+        padding: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 12px;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .syllabus-table {
+        display: block;
+        overflow-x: auto;
+        font-size: 0.85rem;
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .day-column {
+        min-height: auto;
+        padding: 15px;
+        border: 1px solid #eee;
+    }
+
+    .week-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #searchInput, #roleFilter {
+        width: 100%;
+        max-width: none;
+    }
+
+    .faculty-grid { grid-template-columns: 1fr; }
+
+    .course-card {
+        min-width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .cat-btn {
+        flex: 1 1 100%;
+    }
 }
